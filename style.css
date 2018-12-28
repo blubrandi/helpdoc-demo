@@ -367,14 +367,60 @@ h1 {
   font-size: 3rem;
 }
 
+p {
+  font-size: 1rem;
+}
+
 .container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
 .row {
+  min-width: 100%;
+  border: 1px solid purple;
+}
+
+.card-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  border: 2px solid red;
+  border: 3px solid red;
+}
+
+.card {
+  width: 30%;
+  border: 2px solid white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition-timing-function: ease;
+  transition: 2s;
+}
+
+.text_container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.text_container h2:hover{
+cursor: pointer;
+}
+
+.hidden>div {
+	display:none;
+}
+
+.visible>div {
+	display:block;
 }
