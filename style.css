@@ -345,7 +345,9 @@ template {
 body {
   font-size: 62.5%;
   background-color: #333;
+  color: #fff;
   font-family: sans-serif;
+  font-weight: lighter;
 }
 
 h1 {
@@ -355,10 +357,31 @@ h1 {
   font-size: 3rem;
 }
 
+h2 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: left;
+}
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: .7rem;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.card-header div {
+  padding: 10px;
+}
 .container {
   width: 60%;
   margin: 0 auto;
@@ -366,7 +389,6 @@ p {
 
 .row {
   min-width: 100%;
-  border: 1px solid purple;
 }
 
 .card-section {
@@ -374,42 +396,39 @@ p {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 3px solid red;
 }
 
 .card {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   width: 30%;
   min-height: 180px;
   border: 2px solid white;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: #fff;
+  border: 2px solid #fff;
   border-radius: 5px;
   padding: 20px;
   text-decoration: none;
+  color: #fff;
 }
 
-.card p {
-  margin-bottom: 40px;
-}
 
 .button {
-  position: absolute;
-  width: 80%;
   background-color: #333;
   color: #fff;
   padding: .5rem 2rem;
   border-radius: 5px;
-  bottom: 15px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
 
 .button:hover {
-  transform: scale(1.055);
+  transform: scale(1.1);
   transition-timing-function: ease;
   transition: 1.22s;
   cursor: pointer;
@@ -421,7 +440,8 @@ p {
 }
 
 .text_container {
-  background-color: #fff;
+  color: #fff;
+  border: 2px solid #fff;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -438,4 +458,30 @@ p {
 
 .visible>div {
   display: block;
+}
+
+
+@media (max-width: 1024px) {
+  .card-section {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 42%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-section {
+    flex-direction: column;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
